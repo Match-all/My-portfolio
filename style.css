@@ -32,6 +32,59 @@ body {
   filter: brightness(70%);
   /* Adjust brightness for lighting effect */
 }
+
+/* Hero Section */
+header.hero {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header.hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+header.hero .hero-buttons {
+  margin: 20px 0;
+}
+
+header.hero .button {
+  background: #e91de2;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+header.hero .button:hover {
+  background: #d81b60;
+}
+
+header.hero .social-links {
+  margin-top: 20px;
+}
+
+header.hero .social-links a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+header.hero .social-links a:hover {
+  color: #e91de2;
+}
+
+/* About Me Section */
 .about-me {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   border-radius: 10px;
@@ -45,8 +98,6 @@ body {
   backdrop-filter: blur(10px); /* Apply blur effect to background */
   -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
-
-
 
 .about-me img {
   border-radius: 50%;
@@ -97,7 +148,7 @@ body {
   color: #1d49e9;
 }
 
-/* Create three equal columns that floats next to each other */
+/* Create three equal columns that float next to each other */
 .column1 {
   float: left;
   width: 33.33%;
@@ -150,9 +201,8 @@ footer .column h2 {
 
 footer .column .content h3 a {
   color: #3f0aec;
- 
 }
- 
+
 footer .content .social-links a i {
   color:#ff00dd ;
 }
@@ -221,8 +271,6 @@ footer .year{
   margin-top: 50px;
   margin-bottom: 0px;
 }
-
-
 
 /* Responsive layout for footer columns */
 @media (max-width: 768px) {
