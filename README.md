@@ -53,7 +53,7 @@ I specialize in:
 ## Contact
 
 Let’s connect! Feel free to reach out via email or social media:
-- **Email:** tamiratteferi847@gmail.com
+- **Email:** Example@gmail.com
 - **LinkedIn:** [LinkedIn Profile](#) (Add your LinkedIn URL here)
 - **Twitter:** [twitter.com/tamedrawing10](https://twitter.com/tamedrawing10)
 - **Telegram:** [t.me/matchCommunty](https://t.me/matchCommunty)
