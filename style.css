@@ -28,7 +28,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url('./Images/transparent-background-designify.png') center/cover no-repeat fixed;
+  background: url('./Images/My-profile-picture.png') center/cover no-repeat fixed;
   filter: brightness(70%);
   /* Adjust brightness for lighting effect */
 }
