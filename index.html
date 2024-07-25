@@ -6,26 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./Images/logo/favicon_io/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 
 <body>
     <div id="background"></div>
-
+    <div class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
     <!-- Hero Section -->
     <header class="hero">
+        <div class="head">
+            <a href="./Images/my picture.jpg" title="click and see it my picture" target="_blank" class="logo"><span
+                    id="tame">Tamirat</span><span> Teferi</span></a>
+
+           <div class="droplist">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <nav class="navbar" id="btn-content">
+                <a href="#home" id="house">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#service">Services</a>
+                <a href="#testimonial">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+           </div>
+
+        </div>
+        <div class="background-image"></div>
         <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
             <div class="hero-buttons">
                 <a href="#contact" class="button hire-button">Hire Me</a>
-                <a  href="./CV.html" class="button cv-button" target="_blank">📄CV</a>
+                <a href="./CV.html" class="button cv-button" target="_blank">📄CV</a>
                 <a href="./Files/CV_Tamirat_Teferi.pdf" class="button cv-button" download>Download CV</a>
-                
             </div>
             <div class="MyName">
-                <h2> <strong>Hi!</strong> Tamirat</h2>
-                <p>Web Developer</p>
+                <h1>Hi!, I'm <span>Tamirat</span></h1>
+                <h2 class="tex-animation">I'm <span>software and Web Developer</span></h2>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/me/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -34,13 +55,17 @@
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
+            <div class="scroll-down">
+                <!-- <i class="bx bx-chevron-down"></i> -->
+                <div class="about-one">
+                    <img src="./Images/My-profile-picture.png" alt="Tamirat Teferi">
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- About Me Section -->
     <div class="about-me" id="about">
-        <img src="./Images/My-profile-picture.png" alt="Tamirat Teferi">
-
         <h2>My Journey and Passion</h2>
         <p>My journey began in Abaya, Ethiopia, where I completed my preparatory school education. Over the years, I've
             developed a strong expertise in web development, creating dynamic and responsive websites that provide a
@@ -68,7 +93,7 @@
             software applications. My work involves using various programming languages and tools to create functional
             and user-friendly digital solutions.</p>
 
-        <div class="header">
+        <div class="about-me header">
             <h1>More Details on Skills</h1>
         </div>
         <ul class="row1">
@@ -141,7 +166,7 @@
                         <li><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</li>
                         <li><i class="fas fa-envelope"></i> tamirat@example.com</li>
                         <li><i class="fas fa-phone"></i> +251 960 958 825</li>
-                        <li id="site"><i class="fas fa-globe"></i> <a href="http://www.tamiratportfolio.com"
+                        <li <li><i class="fas fa-globe"></i> <a href="http://www.tamiratportfolio.com"
                                 target="_blank">www.tamiratportfolio.com</a></li>
                     </ul>
                 </div>
@@ -191,9 +216,6 @@
 
         // Call the function to update the time units
         updateTime();
-
-        // Update current year dynamically (for completeness)
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 

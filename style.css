@@ -1,4 +1,3 @@
-/* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -10,14 +9,147 @@
   font-family: 'Poppins', sans-serif;
 }
 
+:root {
+  --main-bg-color: #000;
+  /* Black background */
+  --main-text-color: #69e2629c;
+  /* White text color */
+  --light-text-color: #b60fb6;
+  /* Light gray text color */
+  --dark-text-color: #333;
+  /* Dark gray text color */
+  --main-color: #0056b3;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   position: relative;
-  background: #000;
-  /* Black background */
-  color: #ffff;
+  background: var(--main-bg-color);
+  color: #fff;
+}
+
+.head {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--main-text-color);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.logo {
+  transform: scale(1.1);
+  color: #fdfcff;
+  box-shadow: 0 0 25px #3f0aec;
+  border-bottom: 2px solid #3f0aec;
+  padding: 0 15px;
+  background: transparent;
+  border-radius: 20px;
+}
+
+
+.logo {
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px #0eff02;
+  /* Shadow effect */
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #f6f4fd;
+  box-shadow: 0 0 25px  #6fe91d;
+  border-bottom: 2px solid #3f0aec;
+  padding: 0 15px;
+  background: transparent;
+  border-radius: 20px;
+  border:#0cff00 1px solid;
+}
+
+.logo span {
+  color: #3f0aec;
+  font-style:oblique;  /* Color for Teferi */
+}
+
+.logo span:hover {
+  transform: scale(1.1);
+  color: #fdfcff;
+  background: transparent;
+
+}
+
+.logo a #tame {
+  transform: scale(1.1);
+  color: #fafafa;
+  background: transparent;
+}
+
+.logo:hover,
+.logo {
+  transform: scale(1.1);
+}
+
+
+.navbar a {
+  font-size: 1.8rem;
+  color: #859beb;
+  margin-left: 4rem;
+  transition: 0.3s ease;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  background-color: #333333;
+  color: #6fe91d;
+  box-shadow: 0 0 25px #6fe91d;
+  border-bottom: 2px solid #6fe91d;
+
+}
+
+.navbar a#house {
+  color: #6fe91d;
+  border: none;
+  padding: 5px;
+}
+
+.navbar a#house:hover {
+  box-shadow: 0 0 25px #6fe91d;
+  border: 1px solid #6fe91d;
+}
+
+.navbar a.active {
+  color: #e91de2;
+  border-bottom: 3px solid #0cff00;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: #e91de2;
+  display: none;
+}
+
+.navbar a:not(:first-child) {
+  margin-left: 1rem;
 }
 
 /* Background image setup */
@@ -30,12 +162,11 @@ body {
   z-index: -1;
   background: url('./Images/My-profile-picture.png') center/cover no-repeat fixed;
   filter: brightness(70%);
-  /* Adjust brightness for lighting effect */
 }
 
 /* Hero Section */
 header.hero {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.7);
   padding: 100px 20px;
   text-align: center;
   color: #fff;
@@ -56,7 +187,7 @@ header.hero .hero-buttons {
 }
 
 header.hero .button {
-  background: #e91de2;
+  background: #e91de28a;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -66,7 +197,7 @@ header.hero .button {
 }
 
 header.hero .button:hover {
-  background: #d81b60;
+  background: #d81b60a4;
 }
 
 header.hero .social-links {
@@ -86,7 +217,7 @@ header.hero .social-links a:hover {
 
 /* About Me Section */
 .about-me {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -94,9 +225,9 @@ header.hero .social-links a:hover {
   padding: 20px;
   margin: 20px auto;
   max-width: 900px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for card effect */
-  backdrop-filter: blur(10px); /* Apply blur effect to background */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .about-me img {
@@ -106,6 +237,21 @@ header.hero .social-links a:hover {
   object-fit: cover;
   margin-bottom: 20px;
   box-shadow: 0px 0px 50px 5px rgb(21, 13, 39);
+}
+
+.about-one img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.about-one img:hover {
+  border: 3px solid #0057b3c5;
+  box-shadow: 0px 0px 50px 12px rgb(43, 32, 94);
 }
 
 .about-me h2,
@@ -163,18 +309,11 @@ header.hero .social-links a:hover {
   clear: both;
 }
 
-/* Responsive layout for columns */
-@media (max-width: 768px) {
-  .column1 {
-    width: 100%;
-    display: block;
-    padding: 15px 0;
-  }
-}
+
 
 /* Footer Styles */
 footer {
-  background-color:#060024;
+  background-color: #060024;
   padding: 50px 0;
   color: #fff;
 }
@@ -204,20 +343,20 @@ footer .column .content h3 a {
 }
 
 footer .content .social-links a i {
-  color:#ff00dd ;
+  color: #ff00dd;
 }
 
 footer .column .content h3 a:hover {
   color: #ff00dd;
   border-bottom: 1px solid #0cff00;
-  text-shadow: 2p 0 3px 10px #ff00dd;
+  text-shadow: 2px 0 3px 10px #ff00dd;
 }
 
-footer .column.content h3 a:visited {
+footer .column .content h3 a:visited {
   color: #ff00dd8d;
 }
 
-footer .column .content h3 a:active{
+footer .column .content h3 a:active {
   color: #0cff00;
 }
 
@@ -236,49 +375,145 @@ footer .column .social-links a:hover {
   color: #3f0aec;
 }
 
-footer .column .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer .column .content ul li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-footer .column .content ul li i {
-  margin-right: 10px;
-}
-
-footer .column .content ul li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-footer .column .content ul li a:hover {
-  color: #0056b3;
-}
-
-footer .column .content ul #site, i a{
-  color: #ff00dd;
-}
-
-footer .year{
-  color: #fff;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-
-/* Responsive layout for footer columns */
+/* Responsive Styles  For desktop: */
 @media (max-width: 768px) {
+  .droplit{
+    position: relative;
+    display: inline-block;
+   }
+  
+   .bx{
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    width: 300px;
+   }
+  
+   #btn-content{
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3), 0 14px 11px rgba(0, 0, 0, 0.22);
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 1s;
+   }
+  
+   .droplit:active > #btn-content{
+    opacity: 1;
+   }
+  
+   #btn-conten > a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+   }
+  
+  .head {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 2rem;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+
+  .about-me img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-me p {
+    font-size: 16px;
+  }
+
   footer .row {
     grid-template-columns: 1fr;
   }
 
-  footer .right.box form {
-    grid-template-columns: 1fr;
+  footer .column {
+    margin-bottom: 20px;
   }
 }
+
+
+
+
+@media (max-width: 480px) {
+  .droplit{
+    position: relative;
+    display: inline-block;
+   }
+  
+   .bx{
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    width: 300px;
+   }
+  
+   #btn-content{
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3), 0 14px 11px rgba(0, 0, 0, 0.22);
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 1s;
+   }
+  
+   .droplit:hover > #btn-content{
+    opacity: 1;
+   }
+  
+   #btn-conten > a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+   }
+  
+  .head {
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+  }
+
+  .about-me p {
+    font-size: 14px;
+  }
+
+  .social-links a {
+    font-size: 20px;
+  }
+}
+

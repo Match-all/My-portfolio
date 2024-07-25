@@ -1,3 +1,4 @@
+/* Existing Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,13 +13,13 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url('./Images/My-profile-picture.png') center/cover no-repeat fixed;
   filter: brightness(70%);
   /* Adjust brightness for lighting effect */
 }
 
 .container {
   display: flex;
+  /* position: absolute; */
   max-width: 900px;
   margin: 20px auto;
   border: 2px solid #0e013c;
@@ -37,6 +38,8 @@ body {
   padding: 20px;
   backdrop-filter: blur(10px); /* Apply blur effect to background */
   -webkit-backdrop-filter: blur(10px); /* For Safari */
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
 }
 
 .photo {
@@ -46,6 +49,11 @@ body {
 
 .photo:hover {
   box-shadow: 0px 0px 16px #491de9;
+}
+.photo:active {
+  box-shadow: 0 0 15px #0cff00;
+  border-radius: 1px solid #0cff00;
+  border: none;
 }
 
 .photo img {
@@ -58,9 +66,13 @@ body {
 }
 .personal-details h5 strong {
   border-radius: 1px solid #ffff;
-  color: blueviolet;
-  background-color: white;
+  color: rgb(206, 183, 228);
+  background-color: transparent;
   padding: 10px;
+  text-indent: 0;
+  padding: 0;
+  margin: auto;
+  font-size: 2rem;
 }
 
 .personal-details h4 {
@@ -93,7 +105,6 @@ body {
   padding: 10px 27px;
   margin: auto;
   text-indent: 10px;
-  overflow: hidden;
 }
 
 .personal-details,
@@ -102,6 +113,16 @@ body {
   margin: 20px;
   padding: 20px;
   background-color: #050015cd;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px #110249; /* Shadow for card effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
 .main-content {
@@ -123,18 +144,19 @@ body {
 }
 
 .section h1 {
-  color: #ffffff;
+  color: #11e706;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
-.section ul li strong{
+
+.section ul li strong {
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
 }
 
 h3 {
-  color: #1eba16;
+  color: #2f8f2a;
   border-bottom: 2px solid #2c6229;
   padding-bottom: 5px;
   margin-bottom: 10px;
@@ -165,4 +187,61 @@ h3 {
 
 .main-content .section p a {
   color: #491de9;
+}
+
+/* Responsive Styles for Android and iOS Devices */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    position: relative;
+    margin: 10px auto;
+    padding: 10px;
+    width: 95%;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .personal-details,
+  .interests,
+  .languages {
+    margin: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    margin: 5px auto;
+    padding: 5px;
+  }
+
+  .sidebar {
+    padding: 5px;
+  }
+
+  .main-content {
+    padding: 5px;
+  }
+
+  .personal-details,
+  .interests,
+  .languages {
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .personal-details h5 strong {
+    font-size: 1.5rem;
+  }
 }
